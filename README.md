@@ -1,6 +1,8 @@
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/ivanmakovetskiy/devops-for-programmers-project-76/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/ivanmakovetskiy/devops-for-programmers-project-76/actions)
 
+## Ссылка на приложение:
+https://makovetskiy.xyz
 
 ## Подготовка к деплою
 
@@ -16,8 +18,6 @@ ansible-galaxy install -r requirements.yml
 3. Подготовьте файл инвентаризации inventory.ini, пример уже предоставлен в проекте.
 
 
-
-
 ## Запуск проекта
 
 Можно выполнить основной плейбук для деплоя:
@@ -25,7 +25,12 @@ ansible-galaxy install -r requirements.yml
 ansible-playbook -i inventory.ini playbook.yml
 ```
 
-Еще можно запускать конфигурацию одной командой:
+Еще можно подготовить конфигурацию одной командой:
 ```bash
-make setup
+make prepare
+```
+
+И запустить:
+```bash
+make prepare
 ```
