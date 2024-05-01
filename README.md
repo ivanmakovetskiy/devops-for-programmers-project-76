@@ -32,5 +32,5 @@ make prepare
 
 И запустить:
 ```bash
-make prepare
+make deploy
 ```
