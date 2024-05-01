@@ -1,0 +1,16 @@
+db_host: "{{ vault_db_address }}"
+db_name: "{{ vault_db_database }}"
+db_user: "{{ vault_db_username }}"
+db_password: "{{ vault_db_password }}"
+db_port: "{{ vault_db_port }}"
+datadog_api_key: "{{ vault_datadog_api_key }}"
+datadog_site: datadoghq.eu
+site_base_url: http://makovetskiy.xyz
+datadog_checks:
+  http_check:
+    init_config:
+    instances:
+      - name: http_check
+        url: "{{ site_base_url }}"
+        timeout: 5
+        method: GET

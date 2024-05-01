@@ -1,13 +1,8 @@
-- name: Install pip and Docker on all servers
-  hosts: all
-  become: true
+- hosts: all
+  gather_facts: yes
 
-  roles:
-    - geerlingguy.pip
+- name: Prepare servers
+  ansible.builtin.import_playbook: prepare.yml
 
-  tasks:
-    - name: Install Docker Python module
-      pip:
-        name: docker
-        state: present
-
+- name: Deploy project
+  ansible.builtin.import_playbook: deploy.yml
