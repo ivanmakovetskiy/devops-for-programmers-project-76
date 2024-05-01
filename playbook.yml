@@ -1,0 +1,13 @@
+- name: Install pip and Docker on all servers
+  hosts: all
+  become: true
+
+  roles:
+    - geerlingguy.pip
+
+  tasks:
+    - name: Install Docker Python module
+      pip:
+        name: docker
+        state: present
+
